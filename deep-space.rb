@@ -335,7 +335,7 @@ module DeepConnect
     end
 
     def start_deregister_reference
-      @deregister_thread  = Thread.start {
+      @deregister_thread  = Thread.start {	# hakka doribun sureddo ?
 	ids = []
 	loop do
 	  Thread.stop
@@ -348,7 +348,7 @@ module DeepConnect
 	      ids = @deregister_reference_queue.dup
 	      @deregister_reference_queue.clear
 	    ensure
-	      GC.enable unless status
+	      GC.enable unless status		# bunsan GC : rokku be-su neithibu GC ?
 	    end
 	  end
 	  unless ids.empty?
