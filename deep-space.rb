@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: ISO-2022-JP
 #
 #   deep-space.rb - 
 #   	$Release Version: $
@@ -120,10 +120,10 @@ module DeepConnect
     end
 
     #
-    # export root 関連メソッド
+    # export root $B4XO"%a%=%C%I(B
     #
     def init_export_feature
-      # exportしているオブジェクト
+      # export$B$7$F$$$k%*%V%8%'%/%H(B
       @export_roots_mutex = Mutex.new
       @export_roots = {}
     end
@@ -200,12 +200,12 @@ module DeepConnect
     end
 
     #
-    # import 関連メソッド
+    # import $B4XO"%a%=%C%I(B
     #
     DISABLE_GC = true
 
     def init_import_feature
-      # importしているオブジェクト
+      # import$B$7$F$$$k%*%V%8%'%/%H(B
       # peer_id => ref_id
       @import_reference = {}
       @rev_import_reference = {}
